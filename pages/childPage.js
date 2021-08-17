@@ -6,14 +6,23 @@ import Date from '../components/date'
 
 export default function ChildPage({ allPostsData }) {
   return (
-    <p>child</p>
+    <Layout childPage>
+      <Head>
+        <title>{siteTitle}</title>
+      </Head>
+      <section className={utilStyles.headingMd}>
+        <p>This page is in the child project</p>
+      </section>
+      <section className={`${utilStyles.headingMd} ${utilStyles.padding1px}`}>
+        <h2 className={utilStyles.headingLg}>Pages</h2>
+      </section>
+    </Layout>
   )
 }
 
 export async function getStaticProps() {
   return {
     props: {
-   
     }
   }
 }
